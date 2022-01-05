@@ -100,13 +100,13 @@ console.log(multiply(5))
 ```javascript
 const randomNumber = () => {
     console.log('returning a random number...')
-    return Math.random()*10
-}
+    return Math.random()*10;
+};
 function multiply(a, b = randomNumber()) {
-	return a * b
-}
-console.log(multiply(5))
-console.log(multiply(5))
+	return a * b;
+};
+console.log(multiply(5));
+console.log(multiply(5));
 // returning a random number...
 // 8.227761809539015
 // returning a random number...
@@ -140,10 +140,10 @@ const obj = {
     method2( a, b ){
         return console.log(a*b)
     }
-}
+};
 
-obj.method1()
-obj.method2(3,5)
+obj.method1();
+obj.method2(3,5);
 //Method inkoked
 //5
 ```
@@ -152,9 +152,9 @@ obj.method2(3,5)
 
 ```javascript
 
-var propName = 'my object'
+var propName = 'my object';
 const obj = {
-    [propName + ' literal']: 'My object literal value'
+    [propName + ' literal']: 'My object literal value';
 }
 console.log(obj);
 //{ 'my object literal': 'My object literal value' }
@@ -168,21 +168,21 @@ console.log(obj);
 
 ```javascript
 const sum = (...args) => {
-    return args.reduce((total, value) => total + value,0)
+    return args.reduce((total, value) => total + value,0);
 }
-console.log(sum(1,2,3,4))
+console.log(sum(1,2,3,4));
 //10
 ```
 
 Usando o [spread operator](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax), permite que um objeto iterável, como uma expressão de array ou uma  string seja expandido para ser usado onde zero ou mais argumentos (para  chamadas de funções) ou elementos (para arrays *literais*) são esperados. O spread operator pode ser utilizados em *strings, arrays, objetos literais e objetos iteráveis*  :
 
 ```javascript
-const multiply = (...args) => args.reduce((total, value) => total * value,1)
+const multiply = (...args) => args.reduce((total, value) => total * value,1);
 
 const sum = (...rest) => {
-    return multiply(...rest)
+    return multiply(...rest);
 }
-console.log(sum(1,2,3,4))
+console.log(sum(1,2,3,4));
 //24
 ```
 
@@ -395,7 +395,7 @@ console.log(it.next('Value from Outside!'));
 // { value: undefined, done: true }
 ```
 
-Utilizanto Symbol.iterator e Generators para transformar um objetp em iterável:
+Utilizanto Symbol.iterator e Generators para transformar um objeto em iterável:
 
 ```javascript
 const obj = {
@@ -568,7 +568,7 @@ Note que no exemplo acima não tem a instrução `await` na instrução do `retu
 
 ### EventEmitter
 
- [EventEmitter](https://nodejs.dev/learn/the-nodejs-event-emitter) é uma classe que proporsciona uma forma de gerenciar eventos no backend com  Node.js
+ [EventEmitter](https://nodejs.dev/learn/the-nodejs-event-emitter) é uma classe que proporciona uma forma de gerenciar eventos no backend com  Node.js
 
 - Tem, entre outros,  os métodos `on` e `emit`
   - `on ` é usado para acionar um evento
@@ -892,12 +892,20 @@ Quando o javascript encontra um erro no código, o restante do código não irá
 Podemos criar erros personalizados extendendo a classe `Error`, bem como acionar um erro com o comando `throw`:
 
 ```javascript
-let names = ['Huguinho', 'Zezinho', 'Luizinho' ]
+class CustomError extends Error {
+    constructor({message, data}) {
+        super(message),
+        this.data = data
+    }
+};
+
+
+let names = ['Huguinho', 'Zezinho', 'Luizinho' ];
 
 
 try {
-    let name = 'Gustavo'
-    console.log(names[name])
+    let name = 'Gustavo';
+    console.log(names[name]);
     if (names[name] === undefined) {
         throw new CustomError({
             message: 'This person is not in our archives',
@@ -908,11 +916,11 @@ try {
 }
 } catch (error) {
     alert(`An error ocurred :: ${error.message}`);
-    console.log(error)
+    console.log(error);
 } finally {
     console.log('this log will happen if there is or there is not an error')
-}
-console.log('continue javascript code....')
+};
+console.log('continue javascript code....');
 // { Error: This person is not in our archives
 //     at Object.<anonymous> (/home/gustavo/Projetos/DIO/bootcamp_eduzz/dio-desafio-github-primeiro-projeto/Desenvolvimento_avancado_com_javascript_ES6/tempCodeRunnerFile.js:15:15)
 // data: { type: 'form error' } }
