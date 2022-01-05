@@ -1,0 +1,17 @@
+{
+  "name": "Desenvolvimento_avancado_com_javascript_ES6",
+  "version": "1.0.0",
+  "description": "Testes, rascunhos e códigos da aula Desenvolvimento_avancado_com_javascript_ES6 Bootcamp Eduzz#2 DIO",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "sinon": "^12.0.1"
+  }
+}
