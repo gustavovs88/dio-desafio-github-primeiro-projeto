@@ -14,7 +14,7 @@ Abaixo o conteúdo do bootcamp e minha evolução!
 - [x] Introdução a criação de websites com HTML5 e CSS3
 - [x] JavaScript ES6 essencial
 - [x] Desenvolvimento avançado com JavaScript ES6
-- [ ] Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
+- [x] Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
 - [ ] Resolvendo Desafios de Código em Javascript
 - [ ] Criando seu jogo de memória estilo Genius
 - [ ] Mentoria 03: Projeto Eduzz: Explicando o projeto Eduzz e prototipando a aplicação
