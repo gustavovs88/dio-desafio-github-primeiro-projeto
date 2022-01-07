@@ -10,12 +10,12 @@ Abaixo o conteúdo do bootcamp e minha evolução!
 - [x] Projetos ágeis com SCRUM
 - [x] Introdução ao Git e ao GitHub
 - [x] Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso
-- [ ] Mentoria 02: Carreira Eduzz: cultura e governança
+- [x] Mentoria 02: Carreira Eduzz: cultura e governança
 - [x] Introdução a criação de websites com HTML5 e CSS3
 - [x] JavaScript ES6 essencial
 - [x] Desenvolvimento avançado com JavaScript ES6
 - [x] Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
-- [ ] Resolvendo Desafios de Código em Javascript
+- [x] Resolvendo Desafios de Código em Javascript
 - [ ] Criando seu jogo de memória estilo Genius
 - [ ] Mentoria 03: Projeto Eduzz: Explicando o projeto Eduzz e prototipando a aplicação
 - [ ] Introdução ao ReactJS
