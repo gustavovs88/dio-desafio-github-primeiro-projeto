@@ -16,10 +16,10 @@ Abaixo o conteúdo do bootcamp e minha evolução!
 - [x] Desenvolvimento avançado com JavaScript ES6
 - [x] Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces
 - [x] Resolvendo Desafios de Código em Javascript
-- [ ] Criando seu jogo de memória estilo Genius
-- [ ] Mentoria 03: Projeto Eduzz: Explicando o projeto Eduzz e prototipando a aplicação
-- [ ] Introdução ao ReactJS
-- [ ] Trabalhando com Componentes em React
+- [x] Criando seu jogo de memória estilo Genius
+- [x] Mentoria 03: Projeto Eduzz: Explicando o projeto Eduzz e prototipando a aplicação
+- [x] Introdução ao ReactJS
+- [x] Trabalhando com Componentes em React
 - [ ] Desenvolvimento de aplicações para internet com ReactJS
 - [ ] Práticas avançadas em projetos com ReactJS
 - [ ] Introdução aos React Hooks
