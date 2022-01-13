@@ -20,7 +20,7 @@ Abaixo o conteúdo do bootcamp e minha evolução!
 - [x] Mentoria 03: Projeto Eduzz: Explicando o projeto Eduzz e prototipando a aplicação
 - [x] Introdução ao ReactJS
 - [x] Trabalhando com Componentes em React
-- [ ] Desenvolvimento de aplicações para internet com ReactJS
+- [x] Desenvolvimento de aplicações para internet com ReactJS
 - [ ] Práticas avançadas em projetos com ReactJS
 - [ ] Introdução aos React Hooks
 - [ ] Criando aplicações móveis multiplataforma com React Native
