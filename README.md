@@ -4,7 +4,7 @@ Desafio de github da plataforma DIO, realizado durante o Bootcamp Eduzz Full Sta
 
 Abaixo o conteúdo do bootcamp e minha evolução!
 
-- [x]  Boas-vindas ao Bootcamp Eduzz Fullstack Developer #2
+- [x] Boas-vindas ao Bootcamp Eduzz Fullstack Developer #2
 - [x] Mentoria 01: Aula Inaugural: Como ser o próximo contratado pela Eduzz
 - [x] Lógica de Programação Essencial
 - [x] Projetos ágeis com SCRUM
@@ -21,17 +21,17 @@ Abaixo o conteúdo do bootcamp e minha evolução!
 - [x] Introdução ao ReactJS
 - [x] Trabalhando com Componentes em React
 - [x] Desenvolvimento de aplicações para internet com ReactJS
-- [ ] Práticas avançadas em projetos com ReactJS
-- [ ] Introdução aos React Hooks
-- [ ] Criando aplicações móveis multiplataforma com React Native
-- [ ] Resolvendo desafios em JavaScript
-- [ ] Criando um front-end totalmente componentizado na prática com ReactJS
-- [ ] Mentoria 04: Projeto Eduzz: Componentizando a aplicação e criando interfaces responsivas
-- [ ] MySql - Trabalhando com as suas primeiras tabelas
-- [ ] Introdução ao MongoDB e Bancos de Dados NoSQL
-- [ ] Mentoria 05: Projeto Eduzz: Criando a base de dados para suportar a aplicação
-- [ ] Introdução ao Node.js com JavaScript
-- [ ] Explorando o Estilo Arquitetural REST com Node.js
+- [x] Práticas avançadas em projetos com ReactJS
+- [x] Introdução aos React Hooks
+- [x] Criando aplicações móveis multiplataforma com React Native
+- [x] Resolvendo desafios em JavaScript
+- [x] Criando um front-end totalmente componentizado na prática com ReactJS
+- [x] Mentoria 04: Projeto Eduzz: Componentizando a aplicação e criando interfaces responsivas
+- [x] MySql - Trabalhando com as suas primeiras tabelas
+- [x] Introdução ao MongoDB e Bancos de Dados NoSQL
+- [x] Mentoria 05: Projeto Eduzz: Criando a base de dados para suportar a aplicação
+- [x] Introdução ao Node.js com JavaScript
+- [x] Explorando o Estilo Arquitetural REST com Node.js
 - [ ] Node.js com Bancos de Dados Relacionais (SQL)
 - [ ] Microsserviços e Integrações com Node.js
 - [ ] Resolvendo Desafios Intermediários em JavaScript
