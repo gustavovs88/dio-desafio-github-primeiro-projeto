@@ -1,6 +1,6 @@
-# Desafio git/github DIO - Bootcamp Eduzz Full Stack #2
+# DIO - Bootcamp Eduzz Full Stack #2
 
-Desafio de github da plataforma DIO, realizado durante o Bootcamp Eduzz Full Stack #2. Neste repositório estarão os projetos e anotações das aulas do bootcamp.
+ Neste repositório estarão os códigos e anotações das aulas do bootcamp.
 
 Abaixo o conteúdo do bootcamp e minha evolução!
 
@@ -32,14 +32,14 @@ Abaixo o conteúdo do bootcamp e minha evolução!
 - [x] Mentoria 05: Projeto Eduzz: Criando a base de dados para suportar a aplicação
 - [x] Introdução ao Node.js com JavaScript
 - [x] Explorando o Estilo Arquitetural REST com Node.js
-- [ ] Node.js com Bancos de Dados Relacionais (SQL)
-- [ ] Microsserviços e Integrações com Node.js
-- [ ] Resolvendo Desafios Intermediários em JavaScript
-- [ ] Construindo Encurtador de URL
-- [ ] Mentoria 06: Projeto Eduzz: Desenvolvendo o back-end da aplicação e plugando o front-end
-- [ ] Mentoria 07: Projeto Eduzz: Entendendo e utilizando serviços de mensageria
-- [ ] Fundamentos de Arquitetura de Sistemas
-- [ ] Introdução a orquestração de contêineres com Docker
-- [ ] Introdução prática a computação em nuvem usando AWS
-- [ ] Mentoria 08: Projeto Eduzz: Vislumbrando possibilidades de integração da aplicação com a nuvem
-- [ ] Projeto Eduzz: Retire todas as dúvidas encontradas no desenvolvimento do projeto
+- [x] Node.js com Bancos de Dados Relacionais (SQL)
+- [x] Microsserviços e Integrações com Node.js
+- [x] Resolvendo Desafios Intermediários em JavaScript
+- [x] Construindo Encurtador de URL
+- [x] Mentoria 06: Projeto Eduzz: Desenvolvendo o back-end da aplicação e plugando o front-end
+- [x] Mentoria 07: Projeto Eduzz: Entendendo e utilizando serviços de mensageria
+- [x] Fundamentos de Arquitetura de Sistemas
+- [x] Introdução a orquestração de contêineres com Docker
+- [x] Introdução prática a computação em nuvem usando AWS
+- [x] Mentoria 08: Projeto Eduzz: Vislumbrando possibilidades de integração da aplicação com a nuvem
+- [x] Projeto Eduzz: Retire todas as dúvidas encontradas no desenvolvimento do projeto
