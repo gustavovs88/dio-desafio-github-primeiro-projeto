@@ -547,4 +547,68 @@ module.exports = fp(async function (fastify, opts) {
 ```
 The `fastify-plugin` *module* is used to de-encapsulate a plugin. We pass the exported plugin function into `fp` to achieve this. What this means is, any modifications we make to the `fastify` instance will apply across our service. If we did not pass the exported function to `fastify-plugin` any modifications to the `fastify` instance that is passed to it would only apply to itself and any descendent plugins that it could register. Since the plugin is loaded as a sibling to our routes we need to indicate we want our plugin to apply laterally. For more information on the Fastify plugin system see [Fastify's Documentation](https://www.fastify.io/docs/v3.9.x/Plugins/).
 
-**STOPPED at beggining 17 of 20**
+We use the `fastify.decorateRequest` method to decorate the *request* object that is passed to route handler functions with a method we name `mockDataInsert`. For more information on Fastify decorators see [Fastify's Documentation](https://www.fastify.io/docs/v3.9.x/Decorators/).
+
+The `insert` function that we provide for the `mockDataInsert` *decorator* accepts two arguments: **category** and **data**. The **data** that is expected is an array of mocked data items, the same as we currently return from our **GET** routes. We use the category and data to calculate a new ID for an incoming item by mapping the category to an ID prefix and then sorting the IDs of the items in the data set, then incrementing the numerical portion of the last ID and coupling it with the prefix.
+
+The this keyword of the insert function will be the *request* object on which it is called. This means we can access `request.body` to get the incoming *payload* of a **POST** request. We then modify the data array by pushing a new item object on to it containing our new ID and the `request.body` copied into the new item object using the *spread operator* (...).
+
+Let's modify our two routes to handle **POST** requests and use this new *request decorator*.
+
+In `mock-srv/routes/confectionery/index.js` let's alter the code to look like so:
+```
+'use strict'
+
+const data = [
+  {id: 'B1', name: 'Chocolate Bar', rrp: '22.40', info: 'Delicious overpriced chocolate.'}
+]
+
+module.exports = async function (fastify, opts) {
+  fastify.get('/', async function (request, reply) {
+    return data
+  })
+  fastify.post('/', async function (request, reply) {
+    request.mockDataInsert(opts.prefix.slice(1), data)
+    return data
+  })
+}
+```
+
+We've placed the *array* with our single confectionery item into a constant called **data**. We now just return that data array from our `fastify.get` *route*. Our new `fastify.post` *route* also returns the **data** array but first it uses the `request.mockDataInsert` method that our `plugins/data-util.js` library *plugin* added via `fastify.decorateRequest`. The `opts.prefix` contains the *route* prefix for our *route*, in this case it will be **/confectionery** because the name of the folder that this `index.js` file is in is named confectionery. We pass `opts.prefix.slice(1)` (which strips the leading forward slash) into `request.mockDataInsert` as the first argument. This is the category parameter of the *insert* function in `plugins/data-util.js`. We pass the **data** array as the second argument. This will then update the data with the new item as based on the `request.body` (which is the incoming **POST** body payload) along with its newly calculated ID. The **data** array with its new item is then returned from the **POST** *request*.
+
+Now let's update `mock-srv/routes/electronics/index.js` in the same manner:
+```
+'use strict'
+
+const data = [
+  {id: 'A1', name: 'Vacuum Cleaner', rrp: '99.99', info: 'The suckiest vacuum in the world.'},
+  {id: 'A2', name: 'Leaf Blower', rrp: '303.33', info: 'This product will blow your socks off.'}
+]
+
+module.exports = async function (fastify, opts) {
+  fastify.get('/', async function (request, reply) {
+    return data
+  })
+  fastify.post('/', async function (request, reply) {
+    request.mockDataInsert(opts.prefix.slice(1), data)
+    return data
+  })
+}
+```
+This is almost exactly the same as` mock-srv/routes/confectionery/index.js` except the **data** array is different and the result of `opts.prefix.slice(1)` will be **electronics** instead of **confectionery**.
+
+It's extremely important to point out that we're not **validating** the incoming **POST** data. It's a mock service so **there is no need to do so**. The only reason to add validation to a mock service is if we needed to mock the flow of validation interactions between server and client.
+
+In a production scenario failing to sanitize and validate incoming **POST** data and then sending that same **POST** data back in the response can lead to vulnerabilities. For an example scenario see ["Testing for Reflected Cross Site Scripting"](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting). If we were to add *validation* to our **POST** route, we would use Fastify route schema support. See [Fastify's Documentation](https://www.fastify.io/docs/v2.2.x/Validation-and-Serialization/) for more information.
+
+Now let's open two terminal windows, one with the current working directory set to our project folder and the other with the current working directory set to the `mock-srv` folder.
+
+In the first terminal that has the current working directory set to our project folder run:
+```
+serve -p 5050 static
+```
+In the second terminal window that has the current working directory set to the mock-srv folder execute the following:
+```
+npm run dev
+```
+Next we'll navigate to http://localhost:5050 and select "Electronics" from the category selector.
